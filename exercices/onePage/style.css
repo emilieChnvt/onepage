@@ -37,6 +37,7 @@
 
 .btnHeader span{
     position: relative;
+    font-size: 22px;
     z-index: 1;
 }
 

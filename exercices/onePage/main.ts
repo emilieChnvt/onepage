@@ -53,8 +53,8 @@ const serumTimeline = gsap.timeline({
 });
 
 serumTimeline
-    .from('#about_serum h2', { yPercent: 50, opacity: 0, duration: 1 })
-    .from('#about_serum .text-left p', { x: -100, opacity: 0, duration: 1 }, "-=0.5");
+    .from('#about_serum h2 ', { yPercent: 50, opacity: 0, duration: 1 })
+    .from('#about_serum .text-left p, .triangle', { x: -100, opacity: 0, duration: 1 }, "-=0.5");
 
 gsap.to(".triangle", {
     rotation: 360,
@@ -63,6 +63,7 @@ gsap.to(".triangle", {
 
     ease: "linear"
 });
+
 
 gsap.to(".circle ", {
     rotation: -360,
