@@ -65,7 +65,7 @@ const exercicesListPlugin = (): Plugin => {
 
 export default defineConfig({
   plugins: [tailwindcss(), exercicesListPlugin()],
-  base: "./onepage",
+  base: "./",
   resolve: {
     alias: {
       "@": resolve(__dirname, "src"),

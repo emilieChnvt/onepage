@@ -2,16 +2,24 @@ import "@/style.css";
 import "./style.css";
 import gsap from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger, SplitText)
+
+const splitTitle = new SplitText("header .title, header .description", {
+    type: "chars"
+});
 
 const titleTimeline = gsap.timeline();
 
-titleTimeline
-    .from('.title', { xPercent: 110, opacity: 0, duration: 1 })
-    .from('header .description', { xPercent: 130, opacity: 0, duration: 1 }, "-=0.5"); // commence 0.5s avant la fin du titre
+titleTimeline.from(splitTitle.chars, {
+    y: 50,
+    opacity: 0,
+    stagger: 0.05,
+    duration: 0.8,
+    ease: "back.out(1.7)"
+});
 
-titleTimeline.play();
 
 const aboutTimeline = gsap.timeline({
     scrollTrigger: {
