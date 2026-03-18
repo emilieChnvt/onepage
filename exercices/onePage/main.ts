@@ -1,8 +1,18 @@
 import "@/style.css";
 import "./style.css";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
 import gsap from "gsap";
+import Swiper from "swiper";
+
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText";
+import {Autoplay, Navigation, Pagination} from 'swiper/modules';
+
+
+
 
 gsap.registerPlugin(ScrollTrigger, SplitText)
 
@@ -59,4 +69,34 @@ gsap.to(".circle ", {
     duration: 10,
     repeat: -1,
     ease: "linear"
+});
+
+/* slider*/
+
+const swiper = new Swiper('.swiper', {
+    modules: [Navigation, Pagination, Autoplay],
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 4,
+    spaceBetween: 20,
+    speed: 4000,
+    allowTouchMove: true,
+
+    autoplay: {
+        delay: 1,
+        disableOnInteraction: false,
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+    },
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
 });
