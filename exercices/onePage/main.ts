@@ -81,6 +81,7 @@ new Swiper('.swiper', {
     spaceBetween: 20,
     speed: 4000,
     allowTouchMove: true,
+    centeredSlides: true,
 
     autoplay: {
         delay: 1,
