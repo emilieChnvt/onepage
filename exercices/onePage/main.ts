@@ -69,11 +69,10 @@ gsap.to(".circle ", {
     duration: 10,
     repeat: -1,
     ease: "linear"
-});
+})
 
 /* slider*/
-
-const swiper = new Swiper('.swiper', {
+new Swiper('.swiper', {
     modules: [Navigation, Pagination, Autoplay],
     direction: 'horizontal',
     loop: true,

@@ -39,6 +39,8 @@
     position: relative;
     z-index: 1;
 }
+
+/* about section*/
 #about {
     display: flex;
     padding: 4rem 2rem;
@@ -166,7 +168,7 @@
     font-weight: 600;
     margin-bottom: 2rem;
     color: #111827;
-}/* Swiper container */
+}
 .swiper {
     width: 100%;
     padding: 1rem 0;
@@ -181,7 +183,6 @@
     justify-content: center;
     align-items: center;
     border-radius: 12px;
-    overflow: hidden;
     background-color: #fff;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
@@ -195,7 +196,7 @@
 }
 
 .swiper-slide:hover {
-    transform: scale(1.05);
+    transform: scale(1.25) !important;
 }
 
 
