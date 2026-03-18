@@ -1,13 +1,41 @@
-<!doctype html>
-<html lang="en">
+  <!doctype html>
+  <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exemple exercice</title>
+    <title>OnePage</title>
     <script type="module" src="./main.ts" async></script>
+    <link rel="stylesheet" href="style.css">
   </head>
-  <body>
-    <a href="../../" class="btn btn--back">← Accueil</a>
-    <h1>Exemple exercice</h1>
+  <body class="container flex flex-col">
+  <header class="header flex items-center justify-between  relative">
+    <div class="w-1/2">
+      <img src="./assets/header.webp" alt="" class="w-full h-auto rounded-lg">
+    </div>
+
+    <div class="w-1/2 text-right px-6">
+      <h1 class="text-4xl font-bold title">Bienvenu sur notre site</h1>
+      <p class="mt-2 text-lg description">Yepoda, découvrez nos services !</p>
+    </div>
+
+    <a href="#about" class="btnHeader">
+      <span>En savoir plus</span>
+    </a>
+  </header>
+  <section id="about" class="about">
+    <div class="about_left">
+      <h2>
+        A propos de la marque
+      </h2>
+      <div class="description">
+        <p>Yepoda est une marque de skincare inspirée de la K-Beauty qui rend les rituels de soin coréens simples et accessibles. Développés en Corée avec des ingrédients soigneusement sélectionnés, ses produits sont véganes, cruelty-free et pensés pour offrir une routine efficace, sensorielle et plus responsable.</p>
+      </div>
+    </div>
+    <div class="about_right" >
+      <div>
+        <img src="./assets/tousles%20produits.webp" alt="">
+      </div>
+    </div>
+  </section>
   </body>
-</html>
+  </html>
